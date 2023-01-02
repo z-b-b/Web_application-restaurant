@@ -1,0 +1,40 @@
+<!-- שינוי שלי -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="#">Logout</a>
+            </li>
+            <li class="nav-item">
+                <a routerLink="/previous-orders" class="nav-link">Previous Orders</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<!-- שינוי שלי -->
+<div class="container mt-5">
+    <h1>MY ORDER</h1>
+    <div class="row justify-content-between">
+        <div class="card" style="width: 18rem;">
+            <!-- ההזמנה מוצגת בדף -->
+            <div class="card-body card-text">
+                <div *ngFor="let item of all_items;">
+                    <div *ngIf="item.selected_item != ''">        
+                        <b>{{item.selected_item}}</b>
+                        <br>
+                        Amount: {{item.amount}}
+                        <br>
+                        Price: {{item.price}}$
+                        <br>
+                        Date: {{item.date_time | date:'medium'}}
+                        <br>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row justify-content mt-3">
+        <button class="btn btn-primary" (click)="Save_Order_On_Server()">Send order</button>
+    </div>
+</div>

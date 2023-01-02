@@ -1,0 +1,73 @@
+<!-- שינוי שלי -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="#">Logout</a>
+            </li>
+            <li class="nav-item">
+                <a routerLink="/previous-orders" class="nav-link">Previous Orders</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<!-- שינוי שלי -->
+<div class="container mt-5">
+    <h1>MENU</h1>
+    <div class="row justify-content-between">
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="../../assets/img2.jpg" alt="Card image cap">
+            <div class="card-body">
+                <input type="checkbox" name="item1" #item1>&nbsp;<h3>{{restaurant_menu[0].dish_name}}</h3>
+                <p class="card-text">Price: {{restaurant_menu[0].price}}$</p>
+                Amount:&nbsp;<input class="box_style" type="text" name="item1_amount" #item1_amount>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="../../assets/img2.jpg" alt="Card image cap">
+            <div class="card-body">
+                <input type="checkbox" name="item2" #item2>&nbsp;<h3>{{restaurant_menu[1].dish_name}}</h3>
+                <p class="card-text">Price: {{restaurant_menu[1].price}}$</p>
+                Amount:&nbsp;<input class="box_style" type="text" name="item2_amount" #item2_amount>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="../../assets/img2.jpg" alt="Card image cap">
+            <div class="card-body">
+                <input type="checkbox" name="item3" #item3>&nbsp;<h3>{{restaurant_menu[2].dish_name}}</h3>
+                <p class="card-text">Price: {{restaurant_menu[2].price}}$</p>
+                Amount:&nbsp;<input class="box_style" type="text" name="item3_amount" #item3_amount>
+            </div>
+        </div>
+    </div>
+    <div class="row justify-content-between mt-3">
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="../../assets/img2.jpg" alt="Card image cap">
+            <div class="card-body">
+                <input type="checkbox" name="item4" #item4>&nbsp;<h3>{{restaurant_menu[3].dish_name}}</h3>
+                <p class="card-text">Price: {{restaurant_menu[3].price}}$</p>
+                Amount:&nbsp;<input class="box_style" type="text" name="item4_amount" #item4_amount>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="../../assets/img2.jpg" alt="Card image cap">
+            <div class="card-body">
+                <input type="checkbox" name="item5" #item5>&nbsp;<h3>{{restaurant_menu[4].dish_name}}</h3>
+                <p class="card-text">Price: {{restaurant_menu[4].price}}$</p>
+                Amount:&nbsp;<input class="box_style" type="text" name="item5_amount" #item5_amount>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="../../assets/img2.jpg" alt="Card image cap">
+            <div class="card-body">
+                <input type="checkbox" name="item6" #item6>&nbsp;<h3>{{restaurant_menu[5].dish_name}}</h3>
+                <p class="card-text">Price: {{restaurant_menu[5].price}}$</p>        
+                Amount:&nbsp;<input class="box_style" type="text" name="item6_amount" #item6_amount>
+            </div>
+        </div>
+    </div>
+    <div class="row justify-content mt-3">
+        <button class="btn btn-primary"        (click)="Confirm()">Confirm selection</button>
+        <button class="btn btn-secondary ml-1" (click)="Cancel()">Cancel</button>
+    </div>
+</div>

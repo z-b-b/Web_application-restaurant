@@ -1,0 +1,22 @@
+<!-- הדפסת הזמנות קודמות -->
+<header>
+    <br>
+    <br>
+    <h1 style="text-align: center;">{{logged_in_email}} - PREVIOUS ORDERS</h1>
+    <br>
+</header>
+
+<main>
+    <div *ngFor="let order of previous_user_orders;">
+        <hr>
+        &nbsp;<b>{{order.item.selected_item}}</b>
+        <br>
+        &nbsp;Amount: {{order.item.amount}}
+        <br>
+        &nbsp;Price: {{order.item.price}}$
+        <br>
+        &nbsp;Date: {{order.item.date_time | date:'medium'}}
+        <br>
+        <hr>
+    </div>
+</main>

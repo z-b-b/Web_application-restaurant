@@ -1,0 +1,20 @@
+<!-- שינוי שלי -->
+<div class="col-md-6 offset-md-3 mt-5">
+    <div class="card">
+        <h4 class="card-header">Restaurant Login</h4>
+            <div class="card-body">
+                <form style="max-width: 300px;">
+                    <div class="form-group">
+                        <label for="inputEmail">Email:</label>
+                        <input type="text" class="form-control" id="inputEmail" placeholder="Email" autocomplete="off" #email>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputPassword">Password:</label>
+                        <input type="password" class="form-control" id="inputPassword" placeholder="Password" autocomplete="off" #password>
+                    </div>
+                    <button class="btn btn-primary"        (click)="$event.preventDefault();Check_Form_Associate_Option(email.value, password.value, 's')">Sign in</button>
+                    <button class="btn btn-secondary ml-1" (click)="$event.preventDefault();Check_Form_Associate_Option(email.value, password.value, 'r')">Register</button>
+                </form>
+            </div>
+    </div>
+</div>
